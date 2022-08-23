@@ -6,10 +6,10 @@ class Card(var rank: String, var suit: String, var flip: Boolean = true) {
         flip = !flip
     }
 
-    fun printDetail(){
-        when (flip){
-            true -> println("$rank $suit")
-            else -> println("------")
+    fun printDetail(): String{
+        return when (flip){
+            true -> ("$rank $suit")
+            else -> ("------")
         }
     }
 }
